@@ -1,14 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 body {
     background-color: teal;
 }
 
-.input_search input {
+.container {
     width: 80%;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+section {
+    margin-top: 100px;
+}
+
+#search {
+    width: 800px;
     height: 50px;
     padding-left: 10px;
     outline: none;
-    margin: 0 auto;
-    display: block;
+    font-size: 20px;
 }
 
 table {
@@ -22,6 +39,28 @@ table td {
     padding: 20px;
 }
 
+.elave_et {
+    height: 50px;
+    width: 288px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
 .green {
     display: none;
+}
+
+.name {
+    width: 265px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.add {
+    height: 50px;
+    width: 285px;
+    margin-top: 10px;
+    font-size: 20px;
+    outline: none;
 }
