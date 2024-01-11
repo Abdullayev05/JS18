@@ -15,16 +15,23 @@
 
 
 const input = document.querySelector("#search");
-const btn = document.getElementById("#elave_et")
-// const add_btn = document.getElementById(".add")
-// const name_inp = document.getElementById(".name")
-// btn.addEventListener("click", () => {
-//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
-//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
-//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
-// });
+const btn = document.getElementById(".elave_et")
+const addButtons = document.querySelectorAll(".add");
+for (let i = 0; i < addButtons.length; i++) {
+  addButtons[i].onclick = includes;
+}
+function includes() {
+  const inputs = document.querySelectorAll("#data .name");
+  const table = document.querySelector("#data");
+  let tr_td = "<tr>";
+  for (let j = 0; j < inputs.length; j++) {
+    tr_td += "<td>" + inputs[j].value + "</td>";
+  }
+  tr_td += "</tr>";
+  table.innerHTML += tr_td;
+}
 const trs = [...document.querySelectorAll("tr")].slice(1);
-console.log(trs);
+console.log(trs);            
 input.addEventListener("change", () => {
   if (!input.value.trim()) {
     trs.map((tr) => {
@@ -40,3 +47,11 @@ input.addEventListener("change", () => {
   });
 });
 
+
+// const add_btn = document.getElementById(".add")
+// const name_inp = document.getElementById(".name")
+// btn.addEventListener("click", () => {
+//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
+//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
+//   innerHTML += "<tr>" + "<td>" + inp.value + "</td>" + "</tr>"
+// });

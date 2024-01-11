@@ -55,6 +55,7 @@ table td {
     height: 50px;
     font-size: 20px;
     padding-left: 10px;
+    outline: none;
 }
 
 .add {
@@ -62,5 +63,4 @@ table td {
     width: 285px;
     margin-top: 10px;
     font-size: 20px;
-    outline: none;
 }
