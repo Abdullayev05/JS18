@@ -21,7 +21,7 @@ for (let i = 0; i < addButtons.length; i++) {
   addButtons[i].onclick = includes;
 }
 function includes() {
-  const inputs = document.querySelectorAll("#data .name");
+  const inputs = document.querySelectorAll(".name");
   const table = document.querySelector("#data");
   let tr_td = "<tr>";
   for (let i = 0; i < inputs.length; i++) {
@@ -32,7 +32,7 @@ function includes() {
 }
 const trs = [...document.querySelectorAll("tr")].slice(1);
 console.log(trs);            
-input.addEventListener("change", () => {
+input.addEventListener("input", () => {
   if (!input.value.trim()) {
     trs.map((tr) => {
       tr.classList.remove("green");
