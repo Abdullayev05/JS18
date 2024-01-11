@@ -24,8 +24,8 @@ function includes() {
   const inputs = document.querySelectorAll("#data .name");
   const table = document.querySelector("#data");
   let tr_td = "<tr>";
-  for (let j = 0; j < inputs.length; j++) {
-    tr_td += "<td>" + inputs[j].value + "</td>";
+  for (let i = 0; i < inputs.length; i++) {
+    tr_td += "<td>" + inputs[i].value + "</td>";
   }
   tr_td += "</tr>";
   table.innerHTML += tr_td;
